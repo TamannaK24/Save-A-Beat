@@ -1,0 +1,70 @@
+// File: cpr_page.dart
+import 'package:flutter/material.dart';
+import 'choking_child4.dart';
+
+class ChokingChild3 extends StatelessWidget {
+  const ChokingChild3({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFE8E8E8),
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text("Save-A-Beat"),
+        backgroundColor: const Color(0xFF797979),
+        elevation: 0,
+        leading: const Icon(Icons.menu),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.logout),
+          ),
+        ],
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Step 3: Grab your first with the other hand and press into the abdomen with a quick upward push. This helps to make the object or food come out. ',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 22, fontFamily: 'Times New Roman', fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              // Add your next button functionality here
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ChokingChild4()),
+              );
+            },
+            style: ElevatedButton.styleFrom(
+              minimumSize: Size(200, 60),
+            ),
+            child: const Text(
+              'Next',
+              style: TextStyle(fontSize: 24, color: Colors.black, fontFamily: 'Times New Roman'),
+            ),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              minimumSize: Size(100, 50),
+              backgroundColor: const Color(0xFFC8102E),
+            ),
+            child: const Text(
+              'CALL 911',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+                fontFamily: 'Times New Roman',
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
